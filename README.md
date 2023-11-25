@@ -55,7 +55,7 @@ Clonar o repositório e entrar na pasta do projeto
 
 - [Python](https://www.python.org/);
 
-Atualizar o repositório do sistema e instalar a última versão do Python.
+	Atualizar o repositório do sistema e instalar a última versão do Python.
 
    ```bash
    sudo apt update
