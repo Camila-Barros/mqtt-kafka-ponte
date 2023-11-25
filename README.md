@@ -181,9 +181,9 @@ mqtt_client.loop_stop()
 
 - **Zookeeper**
 
-    	Abrir um terminal (1), rodar o Zookeeper e deixar a janela do terminal minimizada, executando em segundo plano.
+Abrir um terminal (1), rodar o Zookeeper e deixar a janela do terminal minimizada, executando em segundo plano.
     
-    	Iniciar o serviço Zookeeper e verificar o status
+Iniciar o serviço Zookeeper e verificar o status
 
     ```bash
     sudo systemctl start zookeeper
