@@ -186,8 +186,8 @@ Abrir um terminal (1), rodar o Zookeeper e deixar a janela do terminal minimizad
 Iniciar o serviço Zookeeper e verificar o status
 
 ```bash
-    sudo systemctl start zookeeper
-    sudo systemctl status zookeeper
+sudo systemctl start zookeeper
+sudo systemctl status zookeeper
 ```
 
 
@@ -201,17 +201,17 @@ No terminal (1) vai aparecer igual a imagem abaixo:
 
 - **Kafka**
 
-    	Abrir um terminal (2), rodar o Kafka, deixar a janela do terminal minimizada, executando em segundo plano.
+Abrir um terminal (2), rodar o Kafka, deixar a janela do terminal minimizada, executando em segundo plano.
 
-	Iniciar o serviço Kafka e verificar o status:
-	
-    ```bash
-    # Iniciar o serviço Kafka e verificar o status
-    sudo systemctl start kafka
-    sudo systemctl status kafka
-    ```
+Iniciar o serviço Kafka e verificar o status:
 
-    	No terminal (2) vai aparecer igual a imagem abaixo:
+```bash
+sudo systemctl start kafka
+sudo systemctl status kafka
+```
+    
+
+No terminal (2) vai aparecer igual a imagem abaixo:
 
    <p>
    	<img src="./fig_kafka.png">
@@ -220,26 +220,26 @@ No terminal (1) vai aparecer igual a imagem abaixo:
 
 - **Tópico**
 
-    	Abrir um terminal (3) para executar a criação do tópico. 
+Abrir um terminal (3) para executar a criação do tópico. 
     	
-    	Entrar na pasta do Kafka e criar o tópico:
+Entrar na pasta do Kafka e criar o tópico:
 
-    ```bash
-    cd /opt/kafka
-    bin/kafka-topics.sh --create --topic corrente --bootstrap-server localhost:9092
-    ```
+```bash
+cd /opt/kafka
+bin/kafka-topics.sh --create --topic corrente --bootstrap-server localhost:9092
+```
 
 - **Console**
 
-    Ainda no mesmo terminal (3), iniciar o **Console do Kafka Consumidor**, para provar que as mensagens estão sendo lidas pelo consumidor Kafka.
+Ainda no mesmo terminal (3), iniciar o **Console do Kafka Consumidor**, para provar que as mensagens estão sendo lidas pelo consumidor Kafka.
 
-	Criar o console:
+Criar o console:
 	
-    ```bash
-    bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic corrente --from-beginning
-    ```
+```bash
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic corrente --from-beginning
+```
 
-    	No terminal (3) vai aparecer igual a imagem abaixo, onde é possível ver as mensagens recebidas no consumidor Kafka:
+No terminal (3) vai aparecer igual a imagem abaixo, onde é possível ver as mensagens recebidas no consumidor Kafka:
 
    <p>
    	<img src="./fig_console.png">
@@ -248,16 +248,16 @@ No terminal (1) vai aparecer igual a imagem abaixo:
 
 - **Bridge**
 
-    Abrir um terminal (4) para executar o script *bridge_mqtt_kafka.py*.
+Abrir um terminal (4) para executar o script *bridge_mqtt_kafka.py*.
 	
-	Entrar na pasta do projeto e executar o script da ponte
+Entrar na pasta do projeto e executar o script da ponte
 	
-    ```bash
-    cd mqtt-kafka-ponte
-    python3 bridge_mqtt_kafka.py
-    ``` 
+```bash
+cd mqtt-kafka-ponte
+python3 bridge_mqtt_kafka.py
+```
 
-    	No terminal (4) vai aparecer igual a imagem abaixo, onde é possível ver a mensagem recebida do MQTT e a mensagem publicada no KAFKA:
+No terminal (4) vai aparecer igual a imagem abaixo, onde é possível ver a mensagem recebida do MQTT e a mensagem publicada no KAFKA:
 
    <p>
    	<img src="./fig_subscriber.png">
@@ -266,19 +266,21 @@ No terminal (1) vai aparecer igual a imagem abaixo:
 
 - **Publisher**
 
-    	Abrir um terminal (5) para executar o script *publisher_mqtt.py*.
+Abrir um terminal (5) para executar o script *publisher_mqtt.py*.
 	
-	Entrar na pasta do projeto e executar o script do produtor:
+Entrar na pasta do projeto e executar o script do produtor:
 	
-    ```bash
-    cd mqtt-kafka-ponte
-    python3 publisher_mqtt.py   
-    ```
-    	No terminal (5) vai aparecer igual a imagem abaixo, onde é possível ver a mensagem publicada no MQTT:
+```bash
+cd mqtt-kafka-ponte
+python3 publisher_mqtt.py   
+```
+
+No terminal (5) vai aparecer igual a imagem abaixo, onde é possível ver a mensagem publicada no MQTT:
 
    <p>
    	<img src="./fig_publisher.png">
    </p>
+
 
 ## Autora
 
