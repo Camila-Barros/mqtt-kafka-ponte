@@ -247,7 +247,7 @@ mqtt_client.loop_stop()
 
 - **Bridge**
 
-    	Abrir um terminal (4) para executar o script *bridge_mqtt_kafka.py*.
+    Abrir um terminal (4) para executar o script *bridge_mqtt_kafka.py*.
 	
 	Entrar na pasta do projeto e executar o script da ponte
 	
