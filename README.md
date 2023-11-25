@@ -185,10 +185,11 @@ Abrir um terminal (1), rodar o Zookeeper e deixar a janela do terminal minimizad
     
 Iniciar o serviço Zookeeper e verificar o status
 
-    ```bash
+```bash
     sudo systemctl start zookeeper
     sudo systemctl status zookeeper
-    ```
+```
+
 
 No terminal (1) vai aparecer igual a imagem abaixo:
 
