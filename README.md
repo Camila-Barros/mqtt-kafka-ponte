@@ -190,7 +190,7 @@ Iniciar o serviço Zookeeper e verificar o status
     sudo systemctl status zookeeper
     ```
 
-    	No terminal (1) vai aparecer igual a imagem abaixo:
+No terminal (1) vai aparecer igual a imagem abaixo:
 
    <p>
    	<img src="./fig_zookeeper.png">
