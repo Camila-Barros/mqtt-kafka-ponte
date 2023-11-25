@@ -39,17 +39,12 @@ Neste contexto, a resiliência e a tolerância a falhas são muito importantes, 
 
 ### Contribuições
 
-```bash
-    # clonar o repositório do projeto
-    $ git clone https://github.com/Camila-Barros/mqtt-kafka-simples
-```
+Clonar o repositório e entrar na pasta do projeto
 
 ```bash
-    # entrar na pasta do projeto
-    $ cd mqtt-kafka-ponte
+    git clone https://github.com/Camila-Barros/mqtt-kafka-ponte
+    cd mqtt-kafka-ponte
 ```
-
-
 
 
 ## Requisitos
@@ -62,10 +57,10 @@ Neste contexto, a resiliência e a tolerância a falhas são muito importantes, 
 
    ```bash
     # atualizar o repositório do sistema
-    $ sudo apt update
+    sudo apt update
 
     # instalar a última versão do Python
-    $ sudo apt install python3
+    sudo apt install python3
     ```
 
 - [Paho](https://pypi.org/project/paho-mqtt/);
