@@ -58,9 +58,9 @@ Clonar o repositório e entrar na pasta do projeto
 Atualizar o repositório do sistema e instalar a última versão do Python.
 
    ```bash
-    sudo apt update
-    sudo apt install python3
-    ```
+   sudo apt update
+   sudo apt install python3
+   ```
 
 - [Paho](https://pypi.org/project/paho-mqtt/);
 
