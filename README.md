@@ -183,7 +183,7 @@ mqtt_client.loop_stop()
 
 Abrir um terminal (1), rodar o Zookeeper e deixar a janela do terminal minimizada, executando em segundo plano.
     
-Iniciar o serviço Zookeeper e verificar o status
+Iniciar o serviço Zookeeper e verificar o status:
 
 ```bash
 sudo systemctl start zookeeper
@@ -242,7 +242,7 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic corrente
 No terminal (3) vai aparecer igual a imagem abaixo, onde é possível ver as mensagens recebidas no consumidor Kafka:
 
    <p>
-   	<img src="./fig_console.png">
+   	<img src="./fig_console2.png">
    </p>
 
 
@@ -260,7 +260,7 @@ python3 bridge_mqtt_kafka.py
 No terminal (4) vai aparecer igual a imagem abaixo, onde é possível ver a mensagem recebida do MQTT e a mensagem publicada no KAFKA:
 
    <p>
-   	<img src="./fig_subscriber.png">
+   	<img src="./fig_bridge.png">
    </p>
 	
 
@@ -278,7 +278,7 @@ python3 publisher_mqtt.py
 No terminal (5) vai aparecer igual a imagem abaixo, onde é possível ver a mensagem publicada no MQTT:
 
    <p>
-   	<img src="./fig_publisher.png">
+   	<img src="./fig_publisher2.png">
    </p>
 
 
