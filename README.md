@@ -181,15 +181,16 @@ mqtt_client.loop_stop()
 
 - **Zookeeper**
 
-    Abrir um terminal (1), rodar o Zookeeper e deixar a janela do terminal minimizada, executando em segundo plano.
+    	Abrir um terminal (1), rodar o Zookeeper e deixar a janela do terminal minimizada, executando em segundo plano.
+    
+    	Iniciar o serviço Zookeeper e verificar o status
 
     ```bash
-    # Iniciar o serviço Zookeeper e verificar o status
     sudo systemctl start zookeeper
     sudo systemctl status zookeeper
     ```
 
-    No terminal (1) vai aparecer igual a imagem abaixo:
+    	No terminal (1) vai aparecer igual a imagem abaixo:
 
    <p>
    	<img src="./fig_zookeeper.png">
@@ -199,15 +200,17 @@ mqtt_client.loop_stop()
 
 - **Kafka**
 
-    Abrir um terminal (2), rodar o Kafka, deixar a janela do terminal minimizada, executando em segundo plano.
+    	Abrir um terminal (2), rodar o Kafka, deixar a janela do terminal minimizada, executando em segundo plano.
 
+	Iniciar o serviço Kafka e verificar o status:
+	
     ```bash
     # Iniciar o serviço Kafka e verificar o status
     sudo systemctl start kafka
     sudo systemctl status kafka
     ```
 
-    No terminal (2) vai aparecer igual a imagem abaixo:
+    	No terminal (2) vai aparecer igual a imagem abaixo:
 
    <p>
    	<img src="./fig_kafka.png">
@@ -216,10 +219,11 @@ mqtt_client.loop_stop()
 
 - **Tópico**
 
-    Abrir um terminal (3) para executar a criação do tópico. 
+    	Abrir um terminal (3) para executar a criação do tópico. 
+    	
+    	Entrar na pasta do Kafka e criar o tópico:
 
     ```bash
-    # entrar na pasta do Kafka e criar o tópico
     cd /opt/kafka
     bin/kafka-topics.sh --create --topic corrente --bootstrap-server localhost:9092
     ```
@@ -228,12 +232,13 @@ mqtt_client.loop_stop()
 
     Ainda no mesmo terminal (3), iniciar o **Console do Kafka Consumidor**, para provar que as mensagens estão sendo lidas pelo consumidor Kafka.
 
+	Criar o console:
+	
     ```bash
-    # Criar o console
     bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic corrente --from-beginning
     ```
 
-    No terminal (3) vai aparecer igual a imagem abaixo, onde é possível ver as mensagens recebidas no consumidor Kafka:
+    	No terminal (3) vai aparecer igual a imagem abaixo, onde é possível ver as mensagens recebidas no consumidor Kafka:
 
    <p>
    	<img src="./fig_console.png">
@@ -242,15 +247,16 @@ mqtt_client.loop_stop()
 
 - **Bridge**
 
-    Abrir um terminal (4) para executar o script *bridge_mqtt_kafka.py*.
-
+    	Abrir um terminal (4) para executar o script *bridge_mqtt_kafka.py*.
+	
+	Entrar na pasta do projeto e executar o script da ponte
+	
     ```bash
-    # entrar na pasta do projeto e executar o script da ponte
     cd mqtt-kafka-ponte
     python3 bridge_mqtt_kafka.py
     ``` 
 
-    No terminal (4) vai aparecer igual a imagem abaixo, onde é possível ver a mensagem recebida do MQTT e a mensagem publicada no KAFKA:
+    	No terminal (4) vai aparecer igual a imagem abaixo, onde é possível ver a mensagem recebida do MQTT e a mensagem publicada no KAFKA:
 
    <p>
    	<img src="./fig_subscriber.png">
@@ -259,14 +265,15 @@ mqtt_client.loop_stop()
 
 - **Publisher**
 
-    Abrir um terminal (5) para executar o script *publisher_mqtt.py*.
-
+    	Abrir um terminal (5) para executar o script *publisher_mqtt.py*.
+	
+	Entrar na pasta do projeto e executar o script do produtor:
+	
     ```bash
-    # entrar na pasta do projeto e executar o script do produtor
     cd mqtt-kafka-ponte
     python3 publisher_mqtt.py   
     ```
-    No terminal (5) vai aparecer igual a imagem abaixo, onde é possível ver a mensagem publicada no MQTT:
+    	No terminal (5) vai aparecer igual a imagem abaixo, onde é possível ver a mensagem publicada no MQTT:
 
    <p>
    	<img src="./fig_publisher.png">
