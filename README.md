@@ -98,8 +98,8 @@ Clonar o repositório e entrar na pasta do projeto
 
 ### Tutorial
 
-https://github.com/Camila-Barros/mqtt-kafka-simples/assets/114541888/eed82792-72b4-4e62-99ff-738a2ab2406e
 
+https://github.com/Camila-Barros/mqtt-kafka-ponte/blob/main/tutorial-ponte.webm
 
 
 ### Publisher MQTT
